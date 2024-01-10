@@ -11,6 +11,7 @@ import {
 
 import { Logo } from './Logo'
 import { NavItem } from './NavItem'
+import { Profile } from './Profile'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
 
 export function Sidebar() {
@@ -38,6 +39,8 @@ export function Sidebar() {
           <NavItem title={'Settings'} icon={Cog} />
         </nav>
         <UsedSpaceWidget />
+        <div className="h-px bg-zinc-200" />
+        <Profile />
       </div>
     </aside>
   )
