@@ -22,7 +22,7 @@ type InputRootProps = ComponentProps<'div'>
 export function InputRoot(props: InputRootProps) {
   return (
     <div
-      className="boder-sinc-300 mx-1 flex w-full items-center gap-2 rounded-lg border px-3 py-2 shadow-sm"
+      className="boder-sinc-300 flex w-full items-center gap-2 rounded-lg border px-3 py-2 shadow-sm"
       {...props}
     />
   )
