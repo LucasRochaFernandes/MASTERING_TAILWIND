@@ -91,7 +91,7 @@ export default function Home() {
             <FileInput.Root className="flex items-start gap-5">
               <FileInput.ImagePreview />
               <FileInput.Trigger />
-              <FileInput.Control />
+              <FileInput.Control accept="image/*" />
             </FileInput.Root>
           </div>
 
