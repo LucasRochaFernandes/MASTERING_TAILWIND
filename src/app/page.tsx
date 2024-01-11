@@ -1,3 +1,6 @@
+import { Mail } from 'lucide-react'
+
+import * as Input from '@/components/input'
 import { SettingsTabs } from '@/components/SettingsTabs'
 
 export default function Home() {
@@ -30,7 +33,110 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <form id="settings" className="mt-6 flex w-full flex-col "></form>
+        <form
+          id="settings"
+          className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
+        >
+          <div className="grid grid-cols-form gap-3">
+            <label
+              htmlFor="firstName"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Name
+            </label>
+            <div className="grid grid-cols-2 gap-6">
+              <Input.InputRoot>
+                <Input.InputControl
+                  id="firstName"
+                  defaultValue="Lucas"
+                ></Input.InputControl>
+              </Input.InputRoot>
+              <Input.InputRoot>
+                <Input.InputControl defaultValue="Fernandes"></Input.InputControl>
+              </Input.InputRoot>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Email Address
+            </label>
+            <Input.InputRoot>
+              <Input.InputPrefix>
+                <Mail className="h-5 w-5 text-zinc-500" />
+              </Input.InputPrefix>
+              <Input.InputControl
+                id="email"
+                type="email"
+                defaultValue="Lucas@gmail.com"
+              />
+            </Input.InputRoot>
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="email"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Your Photo
+              <p className="mt-0.5 text-sm font-normal text-zinc-500">
+                This will be displayed on your profile
+              </p>
+            </label>
+            <div />
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label htmlFor="role" className="text-sm font-medium text-zinc-700">
+              Role
+            </label>
+            <Input.InputRoot>
+              <Input.InputControl id="role" type="text" defaultValue="CTO" />
+            </Input.InputRoot>
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="country"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Country
+            </label>
+            <div></div>
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="timezone"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Timezone
+            </label>
+            <div></div>
+          </div>
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
+              Bio
+              <p className="mt-0.5 text-sm font-normal text-zinc-500">
+                Write a short introduction
+              </p>
+            </label>
+            <div />
+          </div>
+
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label
+              htmlFor="projects"
+              className="text-sm font-medium text-zinc-700"
+            >
+              Portfolio porjects
+              <p className="mt-0.5 text-sm font-normal text-zinc-500">
+                Share a few snippets of your work
+              </p>
+            </label>
+            <div />
+          </div>
+        </form>
       </div>
     </>
   )
