@@ -1,6 +1,7 @@
-import { Mail, UploadCloud, User } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 import * as FileInput from '@/components/Form/FileInput/index'
+import { Select } from '@/components/Form/Select'
 import * as Input from '@/components/input'
 import { SettingsTabs } from '@/components/SettingsTabs'
 
@@ -110,7 +111,7 @@ export default function Home() {
             >
               Country
             </label>
-            <div></div>
+            <Select />
           </div>
           <div className="grid grid-cols-form gap-3 pt-5">
             <label
@@ -143,6 +144,7 @@ export default function Home() {
             </label>
             <FileInput.Root className="">
               <FileInput.Trigger />
+              <FileInput.FileList />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>
